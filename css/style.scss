@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     width: 100vw;
     overflow-x: hidden;
+    gap: 30px;
     nav{
         background-color: #333;
         position: fixed;
@@ -244,6 +245,9 @@ body {
            }
                           .me {
                               width: 35%;
+                @media screen and (max-width: 650px) {
+                    width: 75%;
+                }
                               padding-top: 100px;
                               margin: auto;
                           }
