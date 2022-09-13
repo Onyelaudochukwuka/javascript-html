@@ -1,4 +1,3 @@
-require("dotenv").config();
 const getElement = (attribute) => document.querySelector(`[data-details = ${attribute}]`);
 const Github = {
     username: "Onyelaudochukwuka",
@@ -10,9 +9,7 @@ const Github = {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
-                    Accept: "application/vnd.github.v3+json",
-                    Authorization: "Bearer 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" 
-                
+                    Accept: "application/vnd.github.v3+json"                
                 }
             }
         );
@@ -27,7 +24,10 @@ const Github = {
         return response.text();
     }
 }
+console.log("testing")
 window.onload = async () => {
+    console.log("testing2")
+
     const data = await Github.getWorkflows();
     const readme = await Github.getReadMe();
     if (!!data) {
