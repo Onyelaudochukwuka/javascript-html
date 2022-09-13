@@ -1,23 +1,51 @@
 @import url(../css/style.sass);
-body{
-    
-.loader{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    div{
-        width: 30px;
-        height: 30px;
-        border-radius: 999px;
-        background-color: #fff;
-    }
+
+body {
+
+    .loader {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.5s ease-in-out;
+        
+
+        div {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            animation: loader 1s infinite;
+            @keyframes loader{
+                from{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+            span {
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-radius: 999px;
+                background-color: #fff;
+                &:nth-child(1) {
+                 align-self: flex-end;
+                }
+                &:nth-child(2) {
+                 align-self: flex-start;
+                }
+                &:nth-child(3) {
+                 align-self: flex-end;
+                }
+            }
+        }
     }
 }

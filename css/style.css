@@ -11,12 +11,37 @@ body .loader {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.5s ease-in-out;
 }
 body .loader div {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  animation: loader 1s infinite;
+}
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body .loader div span {
+  display: block;
   width: 30px;
   height: 30px;
   border-radius: 999px;
   background-color: #fff;
+}
+body .loader div span:nth-child(1) {
+  align-self: flex-end;
+}
+body .loader div span:nth-child(2) {
+  align-self: flex-start;
+}
+body .loader div span:nth-child(3) {
+  align-self: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */
