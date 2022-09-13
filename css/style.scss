@@ -1,7 +1,84 @@
-@import url(../css/style.sass);
-
+@import "../sass/_reset.scss";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 body {
-
+    background: #222;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 30px;
+        .logo{
+            float: left;
+            width: 40px;
+                display: flex;
+                flex-direction: column;
+            span {
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 999px;
+                    background-color: #fff;
+            
+                    &:nth-child(1) {
+                        align-self: flex-end;
+                    }
+            
+                    &:nth-child(2) {
+                        align-self: flex-start;
+                    }
+            
+                    &:nth-child(3) {
+                        align-self: flex-end;
+                    }
+                }
+        }
+        ul{
+            list-style: none;
+            flex-basis: 30%;
+            display: flex;
+            justify-content: space-around;
+            gap: 40px;
+            margin: auto;
+            li{
+                display: inline-block;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    display: block;
+                    transition-property: background,color;
+                    transition-duration: 350ms;
+                    transition-timing-function: ease-in-out;
+                    position: relative;
+                    font-weight: 700;
+                    font-size: 0.85em;
+                    padding-inline: 2px;
+                    &:after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: -7px;
+                        width: 100%;
+                        height: 2px;
+                        background: #88c;
+                        transition-property: transform;
+                        transition-duration: 350ms;
+                        transition-timing-function: ease-in-out;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                    }
+                    &:hover{
+                        color: #88c;
+                        &:after{
+                            transform: scaleX(1);
+                            transform-origin: left;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
     .loader {
         position: fixed;
         top: 0;
@@ -11,10 +88,10 @@ body {
         width: 100%;
         height: 100%;
         background-color: #000;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
-        transition: transform 0.5s ease-in-out;
+        transition: transform 1s ease-out;
         
 
         div {
