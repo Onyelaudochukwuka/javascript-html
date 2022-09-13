@@ -19,7 +19,11 @@ const Github = {
 }
 window.onload = async () => {
     const data = await Github.getWorkflows();
-    console.log(data);
+    if (!!data) {
+        setTimeout(() => {
+            getElement("loader").style.transform = "translateX(-100%)";
+        }, 5000)
+    }
     getElement("heading").innerHTML = data.name;
     getElement("subheading").innerHTML = data.bio;
 }
