@@ -36,8 +36,6 @@ window.onload = async () => {
         }, 5000)
     }
     console.log(marked.parse(readme))
-    getElement("heading").innerHTML = data.name;
-    getElement("subheading").innerHTML = data.bio;
     getElement("avatar").src = data.avatar_url;
     getElement("about").innerHTML = marked.parse(readme);
 }
