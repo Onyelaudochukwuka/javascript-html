@@ -385,6 +385,9 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 body nav {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 15px 30px;
@@ -454,6 +457,43 @@ body nav ul li a:hover {
 body nav ul li a:hover:after {
   transform: scaleX(1);
   transform-origin: left;
+}
+body .home {
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body .home .home-content {
+  text-align: center;
+}
+body .home .home-content h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+body .home .home-content p {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+body .home .home-content span {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  align-self: flex-end;
+  background-color: #333;
+  padding: 15px 30px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition-property: background, color;
+  transition-duration: 350ms;
+  transition-timing-function: ease-in-out;
+}
+body .home .home-content span:hover {
+  background-color: #464646;
+  color: #fff;
 }
 body .loader {
   position: fixed;
