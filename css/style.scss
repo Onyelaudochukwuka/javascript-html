@@ -114,23 +114,7 @@ body {
                 margin-bottom: 1em;
             }
             
-            span{
-                font-size: 1.2em;
-                font-weight: 700;
-                margin-bottom: 0.5em;
-                align-self: flex-end;
-                background-color: #333;
-                padding: 15px 30px;
-                border-radius: 999px;
-                cursor: pointer;
-                transition-property: background, color;
-                transition-duration: 350ms;
-                transition-timing-function: ease-in-out;
-                &:hover{
-                    background-color: #464646;
-                    color: #fff;
-                }
-            }
+         
         }
     }
     .about{
@@ -142,6 +126,9 @@ body {
                 font-size: 3em;
                 font-weight: 700;
                 margin-bottom: 0.5em;
+                @media screen and (max-width: 650px) {
+                    font-size: 1.8em;
+                }
             }
             p{
                 font-size: 1.5em;
@@ -150,11 +137,15 @@ body {
             }
             ol{
                 padding: 35px;
+                @media screen and (max-width: 650px) {
+                    padding: 20px;
+                }
                 list-style: circle;
             }
             img{
                 margin: auto;
             }
+             
             div{
                 display: flex;
                 gap: 15px;
@@ -233,4 +224,27 @@ body {
             }
         }
     }
+           .poweredBy {
+               font-size: 1.2em;
+               font-weight: 700;
+               margin-bottom: 0.5em;
+               align-self: flex-end;
+               background-color: #333;
+               padding: 15px 30px;
+               border-radius: 999px;
+               cursor: pointer;
+               transition-property: background, color;
+               transition-duration: 350ms;
+               transition-timing-function: ease-in-out;
+    
+               &:hover {
+                   background-color: #464646;
+                   color: #fff;
+               }
+           }
+                          .me {
+                              width: 35%;
+                              padding-top: 100px;
+                              margin: auto;
+                          }
 }
